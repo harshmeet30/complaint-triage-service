@@ -18,6 +18,7 @@ Work ran in phases, with a human checkpoint after each. Each phase ended in smal
 | 3. Service | validation, SQLite store, FastAPI, 503 path, PII-leak test | `8cfdb7f` |
 | 4. Eval | labelled set, harness with gates, wired into verify | `26db441` |
 | 4b. ADRs | 15 decision records and an index | `d76ade7` |
+| 5b. CI quality | coverage floor, format check, PR template, ADR-0016 | see `git log` |
 | 5. Docs | README, design, verify, operate, this file | see `git log` |
 
 Success criteria were written first, so each phase had a testable target (`intent.md` S1-S7).
@@ -31,6 +32,9 @@ These changes came from the person directing the work, not from the agent:
   before the service layer was built (`1406176`).
 - **ADRs:** asked for a decision record for every decision, not the 3-5 the brief suggests. The agent
   had planned to write only a short `decisions.md`.
+- **CI quality:** asked whether CI had proper unit tests, coverage and linting, and a PR template. The
+  agent had added lint and tests only. Coverage measured 87%, and the agent closed the gaps with tests
+  rather than exclusions, then added the format check, a 95% floor and the template (ADR-0016).
 - **Diagrams:** asked for an architecture and flow diagram in the README. The agent's first README
   draft had none. It was rejected and rewritten with Mermaid request-flow, component and delivery diagrams.
 - **Attribution:** instructed that commits must not carry an AI co-author trailer. The agent had added
@@ -43,6 +47,7 @@ These changes came from the person directing the work, not from the agent:
 - "can you create a dev branch first for these changes and then we can later promote to the main"
 - "did we add ci gate before going further?"
 - "did you add the adrs, I want adrs for every decision"
+- "for the ci did we add proper unit tests, coverage test and a lint tester, plus do we have a PR template"
 
 ## How output was reviewed and verified
 - **Tests first on risk:** PII leakage is tested across the response, database and logs together.

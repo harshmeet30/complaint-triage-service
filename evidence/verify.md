@@ -4,11 +4,15 @@
 ```bash
 python scripts/verify.py
 ```
-Runs three steps in order and stops on the first failure: `ruff check`, `pytest` and the eval gates.
+Runs four steps in order and stops on the first failure: `ruff check`, `ruff format --check`, `pytest`
+with branch coverage (floor 95%), and the eval gates.
 
 ## Latest result (local, Python 3.11)
-- **Lint:** clean.
-- **Tests:** 41 passed.
+- **Lint and format:** clean.
+- **Tests:** 55 passed.
+- **Coverage:** 99.5% with branch coverage on (floor 95%). The only uncovered line is the
+  `raise SystemExit(main(...))` entry point in `evaluate.py`. Coverage was 87% before 14 tests were added
+  for the store error paths, priority branches and eval CLI (ADR-0016).
 - **Eval:** 59 cases, all four gates pass.
 
 | Eval gate | Result | Threshold |
@@ -33,7 +37,7 @@ Runs three steps in order and stops on the first failure: `ruff check`, `pytest`
 ## Local vs pipeline
 | Check | Local | PR / pipeline |
 |---|---|---|
-| `scripts/verify.py` (lint, tests, eval) | yes | yes, as the `verify` job on push to `main` and `dev`, and on PRs to `main` |
+| `scripts/verify.py` (lint, format, tests + coverage, eval) | yes | yes, as the `verify` job on push to `main` and `dev`, and on PRs to `main` |
 | `scripts/demo.py` | yes | not run |
 | Required-status branch protection | n/a | repository setting, not in code |
 
@@ -51,6 +55,8 @@ Runs three steps in order and stops on the first failure: `ruff check`, `pytest`
   These are safe failures (a human sees them), and show where the lexicon is thin.
 - **Redaction gaps:** names, addresses and free-form identifiers are not covered. Phone and account
   patterns are Australian formats only.
+- **Coverage is not assertion quality.** 99.5% shows code was executed, not that it was checked well.
+  The PII-leak test and the tests that make the eval gates fail are the ones that carry real weight.
 - **No load, concurrency or security testing**, and no property-based or fuzz tests for the regexes.
 - **CI has not been exercised on a pull request yet**, and branch protection is not configured by code.
 - **No test of the real uvicorn process in CI.** The server was smoke-tested manually once.

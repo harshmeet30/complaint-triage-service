@@ -20,6 +20,7 @@ decision, alternatives considered and consequences (including what was intention
 | [0013](adr/0013-branching-and-history-policy.md) | `dev` to `main`, no squash, AI use disclosed in docs | Accepted |
 | [0014](adr/0014-no-authentication-in-the-slice.md) | No authentication in the slice (deliberate gap) | Accepted |
 | [0015](adr/0015-synthetic-data-only.md) | Synthetic data only | Accepted |
+| [0016](adr/0016-quality-gates-coverage-format-pr-template.md) | Coverage floor, format check and PR template | Accepted |
 
 ## Intentionally not built
 Authentication, channel ingestion, business-day and holiday calendars, NER for names and addresses,

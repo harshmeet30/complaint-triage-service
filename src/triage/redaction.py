@@ -17,9 +17,7 @@ _ACCOUNT = re.compile(
 )
 _CARD = re.compile(r"\b(?:\d[ -]?){12,18}\d\b")
 _BSB = re.compile(r"\b\d{3}-\d{3}\b")
-_PHONE = re.compile(
-    r"(?:(?:\+61|\b0)[\s-]?\(?[2-478]\)?|\(0[2-478]\))(?:[\s-]?\d){8}\b"
-)
+_PHONE = re.compile(r"(?:(?:\+61|\b0)[\s-]?\(?[2-478]\)?|\(0[2-478]\))(?:[\s-]?\d){8}\b")
 
 
 @dataclass(frozen=True)

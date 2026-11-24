@@ -2,7 +2,7 @@
 
     python scripts/verify.py
 
-Runs lint, format check and tests. Add further gates (eval harness) to STEPS as they are built.
+Runs lint, format check, tests with a branch-coverage floor (95%), and the eval gates.
 Exits non-zero on the first failure.
 """
 
@@ -17,7 +17,21 @@ ENV = {**os.environ, "PYTHONPATH": str(Path(__file__).resolve().parents[1] / "sr
 
 STEPS: list[tuple[str, list[str]]] = [
     ("lint", [sys.executable, "-m", "ruff", "check", "."]),
-    ("tests", [sys.executable, "-m", "pytest", "-q"]),
+    ("format", [sys.executable, "-m", "ruff", "format", "--check", "."]),
+    (
+        "tests+coverage",
+        [
+            sys.executable,
+            "-m",
+            "pytest",
+            "-q",
+            "--cov=triage",
+            "--cov-branch",
+            "--cov-report=term-missing:skip-covered",
+            "--cov-report=xml",
+            "--cov-fail-under=95",
+        ],
+    ),
     ("eval", [sys.executable, "-m", "triage.evaluate"]),
 ]
 

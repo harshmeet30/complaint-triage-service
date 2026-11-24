@@ -19,4 +19,11 @@ jobs:
           python-version: "3.11"
           cache: pip
       - run: pip install -r requirements.txt
+      # lint, format check, tests with 95% branch-coverage floor, eval gates
       - run: python scripts/verify.py
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: coverage-xml
+          path: coverage.xml
+          if-no-files-found: ignore

@@ -103,8 +103,14 @@ def create_app(store: Store | None = None) -> FastAPI:
         log.info(
             "event=triaged id=%s status=%s category=%s confidence=%s abstain_reason=%s "
             "priority=%s hardship=%s redactions=%s",
-            cid, result.status, c.category, c.confidence, c.abstain_reason,
-            result.priority, result.hardship, sum(result.redaction_counts.values()),
+            cid,
+            result.status,
+            c.category,
+            c.confidence,
+            c.abstain_reason,
+            result.priority,
+            result.hardship,
+            sum(result.redaction_counts.values()),
         )
         row = get_store().get(cid)
         return _public(row)  # type: ignore[arg-type]

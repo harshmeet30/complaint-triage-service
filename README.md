@@ -101,8 +101,10 @@ Interactive docs at http://127.0.0.1:8000/docs. Config: `TRIAGE_DB` (default `da
 
 ## Verify (what CI runs)
 ```bash
-python scripts/verify.py     # lint + 41 tests + eval gates
+python scripts/verify.py     # lint + format check + 55 tests with 95% branch-coverage floor + eval gates
 ```
+The same command runs in GitHub Actions on every push and pull request. PRs use
+[`.github/pull_request_template.md`](.github/pull_request_template.md).
 
 ## Example
 ```bash
@@ -144,7 +146,7 @@ flag) and appears in `GET /review-queue`.
 ## Evidence pack
 [`evidence/`](evidence/): [intent](evidence/intent.md) · [design](evidence/design.md) ·
 [agentic workflow](evidence/agentic-workflow.md) · [verify](evidence/verify.md) ·
-[operate](evidence/operate.md) · [decisions](evidence/decisions.md) (15 ADRs in `evidence/adr/`)
+[operate](evidence/operate.md) · [decisions](evidence/decisions.md) (16 ADRs in `evidence/adr/`)
 
 ## Layout
 ```
