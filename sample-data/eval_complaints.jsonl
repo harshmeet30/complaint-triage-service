@@ -1,0 +1,59 @@
+{"text": "Someone rang pretending to be from your fraud team and I gave them my login. $4,200 has gone from my savings.", "expected": "scam_fraud"}
+{"text": "There are three transactions on my statement from overseas that I did not make. Please investigate and reverse them.", "expected": "scam_fraud"}
+{"text": "I think my account was hacked, money is moving out to payees I have never heard of.", "expected": "scam_fraud"}
+{"text": "I got an SMS that looked like it came from the bank, clicked the link and now my card is being used online. This is a phishing attack.", "expected": "scam_fraud"}
+{"text": "A scammer convinced me to move my savings to a safe account. Can the bank recall the payment?", "expected": "scam_fraud"}
+{"text": "My card details were skimmed at a petrol station and unauthorised purchases total $890.", "expected": "scam_fraud"}
+{"text": "Someone has taken out a loan in my name. It is identity fraud and nobody has responded to me.", "expected": "scam_fraud"}
+{"text": "A payment went to a crypto exchange which I never authorised.", "expected": "scam_fraud"}
+{"text": "Fake invoice scam: I paid a fraudster $12,000 to BSB 062-000 account number 12345678.", "expected": "scam_fraud"}
+{"text": "Money left my account to an overseas payee. I never agreed to this and it looks like fraud.", "expected": "scam_fraud"}
+{"text": "Scammers called claiming to be the tax office and I paid them with gift cards bought on my card.", "expected": "scam_fraud"}
+{"text": "I was made redundant in October and I'm struggling to pay my home loan. Can we arrange something?", "expected": "financial_hardship"}
+{"text": "I received a default notice but I am in hardship due to illness, please pause the loan.", "expected": "financial_hardship"}
+{"text": "Since my hours were cut I cannot afford the repayments on my credit card.", "expected": "financial_hardship"}
+{"text": "I'm behind on my car loan and need a payment arrangement before it goes further.", "expected": "financial_hardship"}
+{"text": "Unable to pay my mortgage this month after losing my job. What options exist?", "expected": "financial_hardship"}
+{"text": "I have fallen into arrears after separating from my partner and need some relief.", "expected": "financial_hardship"}
+{"text": "Medical bills have wiped out our savings and we can't afford the card repayments.", "expected": "financial_hardship"}
+{"text": "I need to apply for financial hardship assistance on my personal loan.", "expected": "financial_hardship"}
+{"text": "Since the redundancy I'm struggling to pay the mortgage and need to talk about hardship.", "expected": "financial_hardship"}
+{"text": "We cannot afford the rising repayments and a default notice arrived yesterday.", "expected": "financial_hardship"}
+{"text": "I was charged a $15 dishonour fee even though my payment cleared on time.", "expected": "fees_charges"}
+{"text": "The monthly account fee should have been waived because I deposit over $2000 every month.", "expected": "fees_charges"}
+{"text": "I was hit with an overdraft fee of $10 for a $2 overdrawn balance that lasted one hour.", "expected": "fees_charges"}
+{"text": "Please explain the interest charge on my credit card, it looks far higher than the contract states.", "expected": "fees_charges"}
+{"text": "ATM fees keep appearing on my statement for withdrawals at your own machines.", "expected": "fees_charges"}
+{"text": "An international transaction fee was charged twice on the same purchase.", "expected": "fees_charges"}
+{"text": "I want a refund of the fee for paper statements I never asked for.", "expected": "fees_charges"}
+{"text": "Account keeping charges were deducted after I closed the account.", "expected": "fees_charges"}
+{"text": "Why did you charge a late fee on a payment I made a day early?", "expected": "fees_charges"}
+{"text": "Dishonour fees of $30 each were applied three times in one week.", "expected": "fees_charges"}
+{"text": "The teller at the Parramatta branch was rude and dismissive when I asked about my loan.", "expected": "service_conduct"}
+{"text": "I waited 55 minutes on the phone and then the call centre hung up on me.", "expected": "service_conduct"}
+{"text": "Poor service all round. Nobody returned my calls about the mortgage application.", "expected": "service_conduct"}
+{"text": "I felt discriminated against because of my accent when I applied at the branch.", "expected": "service_conduct"}
+{"text": "Staff were unhelpful and kept transferring me between departments.", "expected": "service_conduct"}
+{"text": "I emailed three times and was ignored; no one called me back as promised.", "expected": "service_conduct"}
+{"text": "The manager was extremely rude to my elderly mother at the branch.", "expected": "service_conduct"}
+{"text": "The call centre operator was rude and hung up when I asked for a manager.", "expected": "service_conduct"}
+{"text": "Poor service at the branch, I waited over an hour and no one apologised.", "expected": "service_conduct"}
+{"text": "The consultant was rude to me and I was ignored for twenty minutes.", "expected": "service_conduct"}
+{"text": "I'm locked out of online banking after the app update and the reset code never arrives.", "expected": "product_issue"}
+{"text": "My card declined at the supermarket although I had plenty of funds.", "expected": "product_issue"}
+{"text": "The transfer failed twice and the money has been held for three days.", "expected": "product_issue"}
+{"text": "The mobile app crashes whenever I open my statements. It has been not working since Tuesday.", "expected": "product_issue"}
+{"text": "Payment failed for my electricity bill via BPAY even though the account had money.", "expected": "product_issue"}
+{"text": "There is a glitch showing my balance as zero in the app.", "expected": "product_issue"}
+{"text": "Login keeps failing with an error message after I changed my phone.", "expected": "product_issue"}
+{"text": "Tap and pay stopped working on my debit card.", "expected": "product_issue"}
+{"text": "I'm locked out of my account and the app keeps showing an error.", "expected": "product_issue"}
+{"text": "Online banking is not working and my payment failed twice.", "expected": "product_issue"}
+{"text": "Hello, I would like to talk to someone about my situation.", "expected": "needs_review"}
+{"text": "Unauthorised fraud on my account and also a huge overdraft fee and poor service.", "expected": "needs_review"}
+{"text": "I can't afford my repayments because I was scammed out of my savings.", "expected": "needs_review"}
+{"text": "The app showed an error and I was charged a fee for the failed payment.", "expected": "needs_review"}
+{"text": "I am a pensioner and nobody explains my statement to me.", "expected": "needs_review"}
+{"text": "I was treated disrespectfully by your collections team.", "expected": "needs_review"}
+{"text": "My daughter is in hospital and I need to talk about my loan.", "expected": "needs_review"}
+{"text": "The error on my statement is annoying.", "expected": "needs_review"}
